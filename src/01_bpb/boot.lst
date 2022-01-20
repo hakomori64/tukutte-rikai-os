@@ -1,0 +1,18 @@
+     1                                  ; エントリーポイント
+     2                                  entry:
+     3 00000000 EB58                        jmp ipl
+     4                                  
+     5                                      ; ---------
+     6                                      ; BPB (BIOS Parameter Block)
+     7                                      ; ---------
+     8 00000002 90<rept>                    times 90 - ($ - $$) db 0x90
+     9                                  
+    10                                      ; ---------
+    11                                      ; IPL(Initial Program Loader)
+    12                                      ; --------- 
+    13                                  
+    14                                  ipl:
+    15 0000005A EBFE                        jmp $
+    16                                  
+    17 0000005C 00<rept>                    times 510 - ($ - $$) db 0x00
+    18 000001FE 55AA                        db 0x55, 0xaa
