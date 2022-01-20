@@ -170,13 +170,16 @@ stage_3rd:
 
     mov eax, [ACPI_DATA.adr]
     cmp eax, 0
-    je .10E
+    je .12E
 
     cdecl itoa, ax, .p4, 4, 16, 0b0100
     shr eax, 16
     cdecl itoa, ax, .p3, 4, 16, 0b0100
     cdecl puts, .s2
+    jmp .10E
 
+.12E:
+    cdecl puts, .e0
 .10E:
 
     jmp $
@@ -198,6 +201,8 @@ stage_3rd:
 .p4:
     db "ZZZZ", 0x0A, 0x0D, 0
 
+.e0:
+    db "Failed to load ACPI Table", 0x0A, 0x0D, 0
 
 
 ; ****************************
