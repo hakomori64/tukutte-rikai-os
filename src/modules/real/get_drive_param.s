@@ -1,4 +1,5 @@
 ; get_drive_param
+; ドライブの情報を取得して、drive構造体のアドレスに置く
 ; @params
 ;   drive: drive構造体のアドレス. noを事前にセットしておく
 ; @return

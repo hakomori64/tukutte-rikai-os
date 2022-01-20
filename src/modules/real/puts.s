@@ -1,4 +1,5 @@
 ; puts
+; 文字列を表示する
 ; @params address (2 bytes) 表示文字列へのアドレス
 ; @returns void
 ; @example

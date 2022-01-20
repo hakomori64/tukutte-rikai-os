@@ -1,4 +1,5 @@
 ; get_font_adr
+; BIOSのフォントが置かれているアドレスを取得する
 ; @params
 ;   adr: フォントアドレス格納位置
 ; @returns

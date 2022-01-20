@@ -1,4 +1,5 @@
 ; reboot
+; 再起動する
 ; @params
 ; @returns
 ; @example

@@ -1,4 +1,5 @@
 ; putc
+; 一文字表示する
 ; @params ch (2 bytes) 文字コード
 ; @returns void
 ; @example
